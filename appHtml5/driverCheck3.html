@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,
+minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/driverCheck.css"/>
+</head>
+<body>
+
+<div class="section1 section">
+           <div class="success_icon">
+           <img src="images/success.png" alt="">
+           </div>
+           <div class="remind">
+           您的资料已提交成功!
+           </div>
+         <!--    remind end -->
+        <div class="remind-line">
+        <span class="red-line">——————</span><span class="remind-title">温馨提示</span><span class="red-line">——————</span>
+        </div>
+        <ul class="remind-content">
+           <li> 您已经成功认证为叮叮司机，</li>
+            <li>感谢您的支持!</li>
+        </ul>
+</div>
+<!-- section1 end -->
+<div class="section2 section">
+      <div class="success_icon">
+           <img src="images/checking.png" alt="">
+           </div>
+           <div class="remind">
+           您的资料已提交成功!
+           </div>
+         <!--    remind end -->
+        <div class="remind-line">
+        <span class="red-line">——————</span><span class="remind-title">温馨提示</span><span class="red-line">——————</span>
+        </div>
+        <ul class="remind-content content2">
+           <li> 感谢您对叮叮的支持!</li>
+           <li>审核结果将在2-5个工作日内以短信的形式通知您,请注意查收。</li>
+        </ul>
+</div>
+<!-- section2 end -->
+<div class="section3 section">
+      <div class="success_icon">
+           <img src="images/error.png" alt="">
+           </div>
+           <div class="remind">
+           非常抱歉！
+           </div>
+         <!--    remind end -->
+        <div class="remind-line">
+        <span class="red-line">——————</span><span class="remind-title">温馨提示</span><span class="red-line">——————</span>
+        </div>
+        <ul class="remind-content content2">
+           <li> 您的认证未通过审核，</li>
+           <li>请您返回修改信息后重新提交审核！</li>
+        </ul>
+        <div class="submit-button">
+            请重新填写资料认证
+        </div>
+</div>
+<!-- section3 end -->
+<div class="section4 section">
+        <div class="basic-driver">
+          司机基本信息
+        </div>
+      <!--   basic-driver end -->
+      <dl class="content">
+         <dd> <label>姓 : </label> <input type="text" class="surname form-control" name="msg1" maxlength="5"></dd>
+         <dd> <label>名 : </label>  <input type="text" class="lastName form-control" name="msg2" maxlength="10"></dd> 
+         <dd> <label>运营城市 : </label>   <select class=" cityId"></select></dd> 
+         <dd> <label>身份证号 : </label>  <input type="text" class="form-control idCard" name="msg3" maxlength="18"></dd> 
+         <dd> <label>驾驶证档案编号 : </label>    <input type="text" class="form-control jszFileNumber" name="msg4" maxlength="12"></dd> 
+         <dd> <label>网约车资格证号 : </label>  <input type="text" class="form-control userOperatingPermit" name="msg5" maxlength="18"></dd> 
+         <dd> <label>初领驾驶证日期 : </label>  
+         <input class="startDate1 form-control jszLssueDate" type="text" data-field="date" data-startend="start" data-startendelem=".endDate1" readonly>
+         </dd> 
+         <dd> <label>驾驶证截止日期 : </label> 
+         <input class="endDate1 form-control jszValidityPeriod" type="text" data-field="date" data-startend="end" data-startendelem=".startDate1" readonly>
+         </dd> 
+         <dd> <label>准驾车型 : </label>  
+          <select class=" permittedType">
+                    <option>A1</option>
+                    <option>A2</option>
+                    <option>B1</option>
+                    <option>B2</option>
+                    <option>C1</option>
+                    <option>C2</option>
+                  </select>
+         </dd> 
+      </dl>
+ <!--    content end -->
+       <div class="basic-driver">
+         车辆基本信息
+        </div>
+      <!--   basic-driver end -->
+      <dl class="content">
+         <dd> <label>专车类型 :</label> 
+                <select class=" vehicleLevelId">
+                    <option value="1">畅享型</option>
+                    <option value="2">乐享型</option>
+                    <option value="3">专享型</option>
+                    <option value="4">尊享型</option>
+                  </select>
+         </dd>
+         <dd> <label>车牌号 : </label> <input type="text" class="form-control lisencePlate" name="msg6" maxlength="8"></dd> 
+         <dd> <label>车辆品牌 : </label> <input class='form-control keydowninput' type='text' placeholder='输入首字母来获取品牌' data-value='' /></dd> 
+         <dd> <label>车辆颜色 : </label>  <input type="text" class="form-control vehicleColor" name="msg7" maxlength="5"></dd> 
+         <dd> <label>车辆所属 : </label>   <input type="text" class="form-control vehicleOwner" name="msg8" maxlength="10"></dd> 
+         <dd> <label>车架号 : </label>  <input type="text" class="form-control vehicleNumber" name="msg9" maxlength="17"></dd> 
+         <dd> <label>网约车许可证 : </label>  <input type="text" class="form-control vehicleOperatingPermit" name="msg10" maxlength="12"></dd> 
+         <dd> <label>车辆保单单号 : </label>  <input type="text" class="form-control vehicleInsurance" name="msg11" maxlength="25"></dd> 
+         <dd> <label>行车本注册日期 : </label>  <input type="text" class="form-control xszLssueDate" name="dateMsg1" data-field="date" readonly></dd> 
+         <dd> <label>使用性质 : </label> 
+                  <select class="form-control addMsg7">
+                    <option>营运</option>
+                    <option>非营运</option>
+                  </select>
+         </dd> 
+         <dd> <label>行驶证地址 : </label>  <input type="text" class="form-control addMsg1" name="addMsg1" maxlength="20"></dd> 
+         <dd> <label>行车本车辆类型 : </label>  
+                  <select class="form-control addMsg2">
+                    <option>微型</option>
+                    <option>小型</option>
+                    <option>中型</option>
+                    <option>大型</option>
+                  </select>
+         </dd> 
+         <dd> <label>车辆识别代码 : </label>  <input type="text" class="form-control addMsg3" name="addMsg3" maxlength="17"></dd> 
+         <dd> <label>发动机号码 : </label>  <input type="text" class="form-control addMsg4" name="addMsg4" maxlength="20"></dd> 
+          <dd> <label>行车证发证日期 : </label>    <input type="text" class="form-control addMsg6" name="dateMsg1" data-field="date" readonly></dd> 
+      </dl>
+ <!--    content end -->
+        <div class="submit-button">
+            下一步
+        </div>
+</div>
+<!-- section4 end -->
+<div class="section4 section">
+        <div class="basic-driver">
+         照片信息
+        </div>
+      <div class="upload-bg">
+           <div class="upload-title">
+                 身份证正面
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+                身份证正面
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+    <div class="upload-bg">
+           <div class="upload-title">
+                 身份证反面
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+                身份证反面
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+    <div class="upload-bg">
+           <div class="upload-title">
+                手持身份证正面
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+                手持身份证正面
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+    <div class="upload-bg">
+           <div class="upload-title">
+                驾驶本正本
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+                驾驶本正本
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+    <div class="upload-bg">
+           <div class="upload-title">
+                驾驶本副本
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+                驾驶本副本
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+    <div class="upload-bg">
+           <div class="upload-title">
+                网约车资格证
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+                网约车资格证
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+<div class="upload-bg">
+           <div class="upload-title">
+           行驶本正本
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+               行驶本正本
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+<div class="upload-bg">
+           <div class="upload-title">
+           行驶本副本
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+               行驶本副本
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+<div class="upload-bg">
+           <div class="upload-title">
+           车辆保单照片
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+               车辆保单照片
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+<div class="upload-bg">
+           <div class="upload-title">
+          网约车许可证
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+               网约车许可证
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+<div class="upload-bg">
+           <div class="upload-title">
+          车辆照片
+           </div>
+           <div class="upload-content">
+               <img class="img-responsive" id="blah7" src=""/>
+               <a class="upload">
+                <div class="icon-add">+</div>
+                <input  type='file' class="upfile" id="imgInp" data-value='7' />
+                <div class="upload-ct">
+                车辆照片
+                </div>
+               </a>
+           </div>
+           <!-- upload-content end -->
+      </div>
+<!--     upload-bg end -->
+        <div class="submit-button">
+          提交审核
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- section5 end -->
+    <script>
+    (function(doc, win) {
+        var _root = doc.documentElement,
+            resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            resizeCallback = function() {
+                var clientWidth = _root.clientWidth,
+                    fontSize = 10 * 10;
+                if (!clientWidth) return;
+                if (clientWidth < 1080) {
+                    fontSize = 100 * (clientWidth / 750);
+                } else {
+                    fontSize = 100 * (1080 / 750);
+                }
+                _root.style.fontSize = fontSize + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvent, resizeCallback, false);
+        doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+    })(document, window);
+    </script>
+</body>
+
+</html>

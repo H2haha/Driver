@@ -1,0 +1,241 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, select, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family:Microsoft Yahei,SimSun,Helvetica;
+  font-size: 14px;
+  color: #757575; }
+
+select {
+  outline: none; }
+
+input[type="text"] {
+  -webkit-box-shadow: 0 0 0px 1000px white inset; }
+
+img {
+  vertical-align: middle;
+  border: none; }
+
+a {
+  cursor: pointer;
+  text-decoration: none; }
+
+/* 清除浮动 */
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/ }
+
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.ib {
+  display: inline-block; }
+
+.tc {
+  text-align: center; }
+
+.tl {
+  text-align: left; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block;}
+.section{ border: 0.01rem solid #847e7e;}
+/* success */
+.success_icon{ margin-top:2.5rem;margin-bottom:0.5rem;position:relative;height:1.6rem; }
+.success_icon img{display:block;width:1.6rem;height:1.6rem;position:absolute;top:0;left:50%;margin-left:-0.8rem;}
+.remind{ text-align:center;font-size:0.35rem;margin-bottom:0.8rem; font-weight:bold;}
+.remind-line{width:100%; text-align:center;}
+.remind-title{ font-size:0.35rem;padding: 0.25rem;color:#e86666; font-weight:bold;  }
+.red-line{color:#e86666;}
+.remind-content{ margin-top:0.4rem;margin-bottom:0.6rem; }
+.remind-content li{ text-align:center;color:#e86666;line-height:0.5rem; font-size:0.3rem;}
+/* 数据审核 */
+.content2{width:80%;margin:0.4rem auto;}
+/* 认证失败 */
+.submit-button{ display:block;width:80%;height:0.8rem;line-height:0.8rem;font-size: 14px;
+    border-radius: 5px; text-align:center;margin:0.6rem auto;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+              }
+/* 司机基本信息 */
+/*old*/
+.carModel ul {
+  border: 1px solid #ccc;
+  padding-left: 0;
+  width: 100%;
+  z-index: 11000;
+  max-height: 250px;
+  overflow-y: scroll;
+  background-color: #fff;
+  display: none;
+}
+.carModel ul li {
+  list-style: none;
+  padding: 3px 0 3px 5px;
+}
+.carModel ul li:hover {
+  background: #42485B;
+  color: #fff;
+  cursor: pointer;
+}
+.driverMsgBody .control-label {
+  text-align: right;
+  color: #666;
+}
+.carModelSelect{height:33px;}
+
+.driverMsgBody .carModelSelect option {
+  color: #666 !important;
+  font-weight: normal !important;
+}
+.form-group label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size:0.14rem;
+    padding-right:0 !important;
+}
+.has-feedback .form-control {
+    padding-right: 0px;
+}
+.margin-bottom0{ margin-bottom:0!important; }
+.brand-bg{ position:relative; }
+.ulBrand{position: absolute; left: 0px; display: none;}
+.label-select-model{}
+.basic-driver{ font-size:0.35rem; font-weight:bold;color:#e86666;height:1rem;line-height:1rem; text-indent:0.2rem;}
+.label-select-model{display:inline-block;width:100%;margin-top:5px;}
+.btn-next{width:80%;margin-bottom:0.6rem; }
+.glyphicon-remove:before {
+    content: "\e014";
+}
+/* new */
+.content{width:95%;margin:0 auto;}
+.content dd{ margin-bottom:0.2rem; }
+.content dd label{
+    width: 31%;
+    display: inline-block;
+    text-align: right;
+    font-size: 0.25rem;
+    padding-right: 0.1rem;
+    font-weight: bold;
+}
+.form-controls{width:64%;display:inline-block;
+    height: 0.65rem;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.content dd select{width:64%;height:0.66rem;
+    display:inline-block;
+    padding:0 12px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/* 照片信息 */
+/*old*/
+.progress {
+  margin-bottom: 5px;
+  margin-top: 0.3rem;
+}
+.lk{
+    width: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.5rem;
+    margin-top: -1rem;
+    text-align: center;
+    text-decoration:none!important;
+}
+.driverMsgBody2 h4 {
+  color: #666;
+  font-size: 12px;
+}
+.img-responsive{width:100%;height:4rem;overflow:hidden;}
+.iconadd{width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #e86666;}
+.txt{margin-top: 0.05rem;
+    font-size: 0.35rem;
+    color: #e86666;
+    font-weight: bold;}
+.imgBox{position:relative;width:100%;text-align:center}
+.imgInp{position: absolute; left: 0px; top: 0px; height: 100%; width: 100%; opacity: 0;}
+.progress-bar{width: 0%;}
+.btn-danger{ width:80%;margin-bottom: 0.6rem; }
+/* new */
+.upload-title{height:0.6rem;line-height:0.6rem; text-indent:0.5rem;background:#f5f5f5;margin-bottom:0.3rem; font-weight:bold; }
+.upload-content{width:90%;height:4rem;margin:0 auto 0.3rem;position:relative;}
+.img-responsive{width:6.75rem;height:4rem;display:block;}
+.upfile{width:100%;height:100%;opacity:0;position:absolute;display:block;top:0;left:0;}
+.upload{width:3rem;position:absolute;left:50%;top:50%;margin-left:-1.5rem;margin-top:-0.9rem;text-align:center;}
+.icon-add{ width:100%; text-align:center; font-size:0.8rem;color:#e86666;}
+.upload-ct{margin-top:0.05rem; font-size:0.35rem;color:#e86666;font-weight:bold;}
+@media screen and (max-width: 330px) {
+  .content dd select{width:65.5%;}
+}
+@media (min-width: 768px){ 
+ .content dd select{width:4.3rem;
+  height:0.5rem;
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

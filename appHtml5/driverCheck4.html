@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,
+minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/DateTimePicker.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrapValidator.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sweet-alert.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/driverCheck2.css"/>
+</head>
+<body style="overflow-x:hidden;">
+<div class="section1 section">
+           <div class="success_icon">
+           <img src="images/success.png" alt="">
+           </div>
+           <div class="remind">
+           您的资料已提交成功!
+           </div>
+         <!--    remind end -->
+        <div class="remind-line">
+        <span class="red-line">——————</span><span class="remind-title">温馨提示</span><span class="red-line">——————</span>
+        </div>
+        <ul class="remind-content">
+           <li> 您已经成功认证为叮叮司机，</li>
+            <li>感谢您的支持!</li>
+        </ul>
+</div>
+<!-- section1 end -->
+<div class="section2 section">
+      <div class="success_icon">
+           <img src="images/checking.png" alt="" id="success_icon">
+           </div>
+           <div class="remind">
+           您的资料已提交成功!
+           </div>
+         <!--    remind end -->
+        <div class="remind-line">
+        <span class="red-line">——————</span><span class="remind-title">温馨提示</span><span class="red-line">——————</span>
+        </div>
+        <ul class="remind-content content2">
+           <li> 感谢您对叮叮的支持!</li>
+           <li>审核结果将在2-5个工作日内以短信的形式通知您,请注意查收。</li>
+        </ul>
+</div>
+<!-- section2 end -->
+<div class="section3 section">
+      <div class="success_icon">
+           <img src="images/error.png" alt="">
+           </div>
+           <div class="remind">
+           非常抱歉！
+           </div>
+         <!--    remind end -->
+        <div class="remind-line">
+        <span class="red-line">——————</span><span class="remind-title">温馨提示</span><span class="red-line">——————</span>
+        </div>
+        <ul class="remind-content content2">
+           <li> 您的认证未通过审核，</li>
+           <li>请您返回修改信息后重新提交审核！</li>
+        </ul>
+        <div class="submit-button">
+            请重新填写资料认证
+        </div>
+</div>
+<!-- section3 end -->
+<div class="section4 section driverMsgBody">
+      <form id="driver-form" class="form-horizontal bv-form" novalidate="novalidate">
+  
+       <div class="basic-driver">
+          司机基本信息
+        </div>
+   
+      <div class="row form-group has-feedback has-error">
+          <label class="col-xs-4 col-md-4 control-label">姓:</label>
+          <div class="col-xs-7 col-md-7">
+            <input type="text" class="form-control surname" name="msg1" maxlength="5" data-bv-field="msg1">
+            <i class="form-control-feedback glyphicon glyphicon-remove" data-bv-icon-for="msg1" style="display: block;"></i>
+          <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg1" data-bv-result="VALID" style="display: none;">不能为空</small>
+          <small class="help-block" data-bv-validator="regexp" data-bv-for="msg1" data-bv-result="INVALID" style="display: block;">只能输入汉字</small>
+          <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg1" data-bv-result="VALID" style="display: none;">最多5个字符</small>
+          </div>
+      </div>
+      <div class="row form-group has-feedback has-success">
+        <label class="col-xs-4 col-md-4 control-label">名:</label>
+          <div class="col-xs-7 col-md-7">
+          <input type="text" class="form-control lastName" name="msg2" maxlength="10" data-bv-field="msg2">
+          <i class="form-control-feedback glyphicon glyphicon-ok" data-bv-icon-for="msg2" style="display: block;"></i>
+          <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg2" data-bv-result="VALID" style="display: none;">不能为空</small>
+          <small class="help-block" data-bv-validator="regexp" data-bv-for="msg2" data-bv-result="VALID" style="display: none;">只能输入汉字</small>
+          <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg2" data-bv-result="VALID" style="display: none;">最多10个字符</small>
+          </div>
+      </div>
+      <div class="row form-group">
+        <label class="col-xs-4 col-md-4 control-label">运营城市:</label>
+          <div class="col-xs-7 col-md-7">
+            <select class="form-control cityId">
+            <option value="130100">石家庄市</option><option value="130200">唐山市</option><option value="130400">邯郸市</option><option value="130500">邢台市</option><option value="130600">保定市</option><option value="130800">承德市</option><option value="130900">沧州市</option><option value="131100">衡水市</option><option value="140200">大同市</option><option value="140300">阳泉市</option><option value="130700">张家口市</option><option value="140400">长治市</option><option value="610100">西安市</option><option value="140500">晋城市</option><option value="140600">朔州市</option><option value="140700">晋中市</option><option value="140800">运城市</option><option value="140900">忻州市</option><option value="141000">临汾市</option><option value="141100">吕梁市</option><option value="150000">内蒙古</option><option value="150100">呼和浩特市</option><option value="610200">铜川市</option><option value="610300">宝鸡市</option><option value="610400">咸阳市</option><option value="610500">渭南市</option><option value="610600">延安市</option><option value="610800">榆林市</option><option value="610700">汉中市</option><option value="210200">大连市</option><option value="110000">北京市</option><option value="120000">天津市</option><option value="500000">重庆市</option><option value="440100">广州市</option><option value="140100">太原市</option>
+            </select>
+          </div>
+      </div>
+      <div class="row form-group has-feedback has-error">
+        <label class="col-xs-4 col-md-4 control-label">身份证号:</label>
+          <div class="col-xs-7 col-md-7">
+            <input type="text" class="form-control idCard" name="msg3" maxlength="18" data-bv-field="msg3">
+            <i class="form-control-feedback glyphicon glyphicon-remove" data-bv-icon-for="msg3" style="display: block;"></i>
+          <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg3" data-bv-result="VALID" style="display: none;">不能为空</small>
+ <small class="help-block" data-bv-validator="regexp" data-bv-for="msg3" data-bv-result="INVALID" style="display: block;">请输入正确身份证号码</small>
+ <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg3" data-bv-result="VALID" style="display: none;">最多18个字符</small>
+            </div>
+      </div>
+      <div class="row form-group has-feedback">
+        <label class="col-xs-4 col-md-4 control-label">驾驶证档案编号:</label>
+          <div class="col-xs-7 col-md-7">
+            <input type="text" class="form-control jszFileNumber" name="msg4" maxlength="12" data-bv-field="msg4">
+            <i class="form-control-feedback" data-bv-icon-for="msg4" style="display: none;"></i>
+          <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg4" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+          <small class="help-block" data-bv-validator="regexp" data-bv-for="msg4" data-bv-result="NOT_VALIDATED" style="display: none;">12位数字</small>
+          <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg4" data-bv-result="NOT_VALIDATED" style="display: none;">Please enter a value with valid length</small>
+          </div>
+      </div>
+      <div class="row form-group has-feedback">
+        <label class="col-xs-4 col-md-4 control-label">网约车资格证号:</label>
+          <div class="col-xs-7 col-md-7">
+         <input type="text" class="form-control userOperatingPermit" name="msg5" maxlength="18" data-bv-field="msg5">
+         <i class="form-control-feedback" data-bv-icon-for="msg5" style="display: none;"></i>
+    <small class="help-block" data-bv-validator="identical" data-bv-for="msg5" data-bv-result="NOT_VALIDATED" style="display: none;">请与身份证号一致</small>
+    <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg5" data-bv-result="NOT_VALIDATED" style="display: none;">
+    Please enter a value with valid length
+    </small>
+          </div>
+      </div>
+      <div class="row form-group">
+        <label class="col-xs-4 col-md-4 control-label">初领驾驶证日期:</label>
+          <div class="col-xs-7 col-md-7">
+            <input class="startDate1 form-control jszLssueDate" type="text" data-field="date" data-startend="start" data-startendelem=".endDate1" readonly="">
+          </div>
+      </div>
+      <div class="row form-group">
+        <label class="col-xs-4 col-md-4 control-label">驾驶证截止日期:</label>
+          <div class="col-xs-7 col-md-7">
+       <input class="endDate1 form-control jszValidityPeriod" type="text" data-field="date" data-startend="end" data-startendelem=".startDate1" readonly="">
+          </div>
+      </div>
+      <div class="row form-group margin-bottom0">
+        <label class="col-xs-4 col-md-4 control-label">准驾车型:</label>
+          <div class="col-xs-7 col-md-7">
+            <select class="form-control permittedType">
+              <option>A1</option>
+              <option>A2</option>
+              <option>B1</option>
+              <option>B2</option>
+              <option>C1</option>
+              <option>C2</option>
+            </select>
+          </div>
+      </div>
+<div class="basic-driver">
+         车辆基本信息
+</div>
+<div class="row form-group">
+    <label class="col-xs-4 col-md-4 control-label">专车类型:</label>
+    <div class="col-xs-7 col-md-7">
+        <select class="form-control vehicleLevelId">
+            <option value="1">畅享型</option>
+            <option value="2">乐享型</option>
+            <option value="3">专享型</option>
+            <option value="4">尊享型</option>
+        </select>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">车牌号:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control lisencePlate" name="msg6" maxlength="8" data-bv-field="msg6">
+        <i class="form-control-feedback" data-bv-icon-for="msg6"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg6" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="msg6" data-bv-result="NOT_VALIDATED" style="display: none;">车牌号格式不对</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg6" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length
+        </small>
+     </div>
+</div>
+<div class="row form-group carModel">
+    <label class="col-xs-4 col-md-4 control-label">车辆品牌:</label>
+    <div class="col-xs-7 col-md-7">
+        <div class="brand-bg">
+            <input class="form-control keydowninput" type="text" placeholder="输入首字母来获取品牌" data-value="">
+            <ul class="ulBrand">
+            </ul>
+            <script type="text/template" id="liBrandTpl">
+                -~each list as item+
+                <li data-value="#-item.id+">#-item.name+</li>
+                -~/each+
+            </script>
+            <label class="label-select-model" id="lblSelect1">
+                <select id="selectPointOfInterest1" class="carModelSelect form-control">
+                    <option value="">请选择车辆品牌</option>
+                </select>
+            </label>
+            <script type="text/template" id="carModelSelectTpl">
+                -~each list as item+
+                <option value="#-item.id+">#-item.name+</option>
+                -~/each+
+            </script>
+        </div>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">车辆颜色:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control vehicleColor" name="msg7" maxlength="5" data-bv-field="msg7">
+        <i class="form-control-feedback" data-bv-icon-for="msg7" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg7" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="msg7" data-bv-result="NOT_VALIDATED" style="display: none;">只能输入汉字</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg7" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length</small>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">车辆所属:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control vehicleOwner" name="msg8" maxlength="10" data-bv-field="msg8"><i class="form-control-feedback" data-bv-icon-for="msg8" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg8" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="msg8" data-bv-result="NOT_VALIDATED" style="display: none;">只能输入汉字</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg8" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length
+        </small>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">车架号:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control vehicleNumber" name="msg9" maxlength="17" data-bv-field="msg9">
+        <i class="form-control-feedback" data-bv-icon-for="msg9" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg9" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="msg9" data-bv-result="NOT_VALIDATED" style="display: none;">格式不正确</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg9" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid lengths
+        </small>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">网约车许可证:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control vehicleOperatingPermit" name="msg10" maxlength="12" data-bv-field="msg10">
+        <i class="form-control-feedback" data-bv-icon-for="msg10" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="msg10" data-bv-result="NOT_VALIDATED" style="display: none;">12位数字</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg10" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length
+        </small>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">车辆保单单号:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control vehicleInsurance" name="msg11" maxlength="25" data-bv-field="msg11"><i class="form-control-feedback" data-bv-icon-for="msg11" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="msg11" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="msg11" data-bv-result="NOT_VALIDATED" style="display: none;">格式不正确</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="msg11" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length</small>
+    </div>
+</div>
+<div class="row form-group">
+    <label class="col-xs-4 col-md-4 control-label">行车本注册日期:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control xszLssueDate" name="dateMsg1" data-field="date" readonly="">
+    </div>
+</div>
+<!-- 新增 -->
+<div class="row form-group">
+    <label class="col-xs-4 col-md-4 control-label">使用性质:</label>
+    <div class="col-xs-7 col-md-7">
+        <select class="form-control addMsg7">
+            <option>营运</option>
+            <option>非营运</option>
+        </select>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">行驶证地址:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control addMsg1" name="addMsg1" maxlength="20" data-bv-field="addMsg1">
+        <i class="form-control-feedback" data-bv-icon-for="addMsg1" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="addMsg1" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="addMsg1" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length
+        </small>
+    </div>
+</div>
+<div class="row form-group">
+    <label class="col-xs-4 col-md-4 control-label">行车本车辆类型:</label>
+    <div class="col-xs-7 col-md-7">
+        <select class="form-control addMsg2">
+            <option>微型</option>
+            <option>小型</option>
+            <option>中型</option>
+            <option>大型</option>
+        </select>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">车辆识别代码:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control addMsg3" name="addMsg3" maxlength="17" data-bv-field="addMsg3">
+        <i class="form-control-feedback" data-bv-icon-for="addMsg3" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="addMsg3" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="addMsg3" data-bv-result="NOT_VALIDATED" style="display: none;">格式不正确</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="addMsg3" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length
+        </small>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">发动机号码:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control addMsg4" name="addMsg4" maxlength="20" data-bv-field="addMsg4"><i class="form-control-feedback" data-bv-icon-for="addMsg4" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="addMsg4" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="addMsg4" data-bv-result="NOT_VALIDATED" style="display: none;">格式不正确</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="addMsg4" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length
+        </small>
+    </div>
+</div>
+<div class="row form-group has-feedback">
+    <label class="col-xs-4 col-md-4 control-label">行车证档案编号:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control addMsg5" name="addMsg5" maxlength="20" data-bv-field="addMsg5">
+        <i class="form-control-feedback" data-bv-icon-for="addMsg5" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="addMsg5" data-bv-result="NOT_VALIDATED" style="display: none;">不能为空</small>
+        <small class="help-block" data-bv-validator="regexp" data-bv-for="addMsg5" data-bv-result="NOT_VALIDATED" style="display: none;">格式不正确</small>
+        <small class="help-block" data-bv-validator="stringLength" data-bv-for="addMsg5" data-bv-result="NOT_VALIDATED" style="display: none;">
+        Please enter a value with valid length
+        </small>
+    </div>
+</div>
+<div class="row form-group">
+    <label class="col-xs-4 col-md-4 control-label">行车证发证日期:</label>
+    <div class="col-xs-7 col-md-7">
+        <input type="text" class="form-control addMsg6" name="dateMsg1" data-field="date" readonly="">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12 text-center">
+        <a class="btn btn-danger btn-next">下一步</a>
+    </div>
+</div>
+</form>
+<div id="dtBox" class="dtpicker-overlay dtpicker-mobile">
+    <div class="dtpicker-bg">
+        <div class="dtpicker-cont">
+            <div class="dtpicker-content">
+                <div class="dtpicker-subcontent"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- section4 end -->
+<div class="section4 section">
+        <div class="basic-driver">
+         照片信息
+        </div>
+    <div class="container-fluid">
+                  <!-- 1 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+          <div class="upload-title">
+                 身份证正面
+           </div>
+              <div class="imgBox1 imgBox" data-value="" >
+                <img class="addcarimg1 img-responsive" id="blah1"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">身份证正面</span>
+                     <input  type="file" class="imgInp imgInp1" id="imgInp" data-value="1">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar1 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 2 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+          <div class="upload-title">
+                 身份证反面
+           </div>
+              <div class="imgBox2 imgBox" data-value="" >
+                <img class="addcarimg2 img-responsive" id="blah2"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">身份证反面</span>
+                     <input  type="file" class="imgInp imgInp2" id="imgInp" data-value="2">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar2 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 3 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+               <div class="upload-title">
+               手持身份证正面
+               </div>
+              <div class="imgBox3 imgBox" data-value="" >
+                <img class="addcarimg3 img-responsive" id="blah3"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">手持身份证正面</span>
+                     <input  type="file" class="imgInp imgInp3" id="imgInp" data-value="3">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar3 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 4 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+               <div class="upload-title">
+               驾驶本正本
+               </div>
+              <div class="imgBox4 imgBox" data-value="" >
+                <img class="addcarimg4 img-responsive" id="blah4"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">驾驶本正本</span>
+                     <input  type="file" class="imgInp imgInp4" id="imgInp" data-value="4">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar4 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 5 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+                 <div class="upload-title">
+                 驾驶本副本
+                 </div>
+              <div class="imgBox5 imgBox" data-value="" >
+                <img class="addcarimg5 img-responsive" id="blah5"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">驾驶本副本</span>
+                     <input  type="file" class="imgInp imgInp5" id="imgInp" data-value="5">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar5 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 6 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+                <div class="upload-title">
+                网约车资格证
+                </div>
+              <div class="imgBox6 imgBox" data-value="" >
+                <img class="addcarimg6 img-responsive" id="blah6"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">网约车资格证</span>
+                     <input  type="file" class="imgInp imgInp6" id="imgInp" data-value="6">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar6 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 7 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+                 <div class="upload-title">
+                 行驶本正本
+                 </div>
+              <div class="imgBox7 imgBox" data-value="" >
+                <img class="addcarimg7 img-responsive" id="blah7"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">行驶本正本</span>
+                     <input  type="file" class="imgInp imgInp7" id="imgInp" data-value="7">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar7 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 8 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+                <div class="upload-title">
+                行驶本副本
+                </div>
+              <div class="imgBox8 imgBox" data-value="" >
+                <img class="addcarimg8 img-responsive" id="blah8"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">行驶本副本</span>
+                     <input  type="file" class="imgInp imgInp8" id="imgInp" data-value="8">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar8 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 9 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+              <div class="upload-title">
+              车辆保单照片
+              </div>
+              <div class="imgBox9 imgBox" data-value="" >
+                <img class="addcarimg9 img-responsive" id="blah9"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">车辆保单照片</span>
+                     <input  type="file" class="imgInp imgInp9" id="imgInp" data-value="9">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar9 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 10 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+                    <div class="upload-title">
+                    网约车许可证
+                    </div>
+              <div class="imgBox10 imgBox" data-value="" >
+                <img class="addcarimg10 img-responsive" id="blah10"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">网约车许可证</span>
+                     <input  type="file" class="imgInp imgInp10" id="imgInp" data-value="10">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar10 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <!-- 11 -->
+      <div class="row form-group">
+        <div class="col-xs-12 col-md-12 col-img">
+                <div class="upload-title">
+                车辆照片
+                </div>
+              <div class="imgBox11 imgBox" data-value="" >
+                <img class="addcarimg11 img-responsive" id="blah11"  >
+                <a href="javascript:;" class="lk">
+                     <span class="iconadd jiaNo1">+</span><br>
+                     <span class="txt textNo1">车辆照片</span>
+                     <input  type="file" class="imgInp imgInp11" id="imgInp" data-value="11">
+                  </a>
+            </div>  
+            <!-- <button data-name='' data-value='1' class='upload-btn upbtn1'>上传</button> -->
+            <div class="progress">
+                        <div class="progress-bar11 progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                        </div>
+                    </div>
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-12 text-center">
+          <a class="btn btn-danger btn-exam">提交审核</a>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- section5 end -->
+    <script type="text/javascript" src="js/plug/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/plug/bootstrap.min.js"></script>
+    <script src="js/system.js" type="text/javascript"></script>
+    <!--juicer-->
+    <script type="text/javascript" src="js/plug/juicer-min.js"></script>
+    <!-- datePicker -->
+    <script type="text/javascript" src="js/plug/DateTimePicker.js"></script>
+    <!-- bootstrapvalidator -->
+    <script type="text/javascript" src="js/plug/bootstrapValidator.min.js"></script>
+    <!-- sweet-alert -->
+    <script type="text/javascript" src="js/plug/sweet-alert.min.js"></script>
+    <!-- common.js -->
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <script type="text/javascript">
+       $(function(){
+            var userId = getQueryStr("userId");
+                if(userId == 2){
+                 console.log(userId);
+                  alert("1");
+                  $(".section1").hide();
+                  $(".section2").show();
+                          };
+         
+        });
+    </script>
+
+</body>
+
+</html>
